@@ -61,7 +61,7 @@ client.placeholder      #000000 #0C0C0C #FFFFFF #000000   #0C0C0C
 
 # Windows Proprieties
 for_window [class="^.*"] border pixel 2, default_floating_border, title_format %title
-for_window [class="archfetch"] floating enable, resize set height 435 ,resize set width 680, move position center
+for_window [app_id="archfetch"] floating enable, resize set height 380 ,resize set width 600, move position center
 title_align center
 
 # kill focused window
