@@ -6,6 +6,7 @@ esac
 
 # Path to your oh-my-bash installation.
 export OSH='/home/asuka/.oh-my-bash'
+export KernelVersion=$(uname -r | cut -d - -f1)
 
 OSH_THEME="rr"
 
@@ -21,7 +22,6 @@ aliases=(
 
 plugins=(
   git
-  bashmarks
 )
 
 source "$OSH"/oh-my-bash.sh
@@ -37,6 +37,5 @@ alias arpscan="sudo arp-scan --localnet"
 
 alias tmuxa="tmux attach -t"
 alias tmuxk="tmux kill-session -t"
-
 
 source ~/.local/share/blesh/ble.sh
