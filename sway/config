@@ -18,7 +18,11 @@ output * {
 
 font pango:monospace 9
 
-bindsym $mod+d exec --no-startup-id rofi -i -show drun -modi drun -show-icons
+# Rofi Launchers
+bindsym $mod+Mod1+d exec --no-startup-id scrot -d 1 & rofi -i -show drun -modi drun -show-icons
+bindsym $mod+d exec --no-startup-id rofi -show drun -show-icons -config /home/asuka/.config/rofi/daily.rasi
+bindsym $mod+g exec --no-startup-id rofi -show drun -show-icons -config /home/asuka/.config/rofi/games.rasi
+bindsym $mod+Shift+d exec --no-startup-id rofi -show drun -show-icons
 bindsym $mod+s exec --no-startup-id rofi -show ssh
 bindsym $mod+b exec --no-startup-id rofi-bluetooth
 bindsym $mod+Shift+Delete exec --no-startup-id /home/asuka/.apps/rofi/rofi-exit
@@ -34,6 +38,9 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86MonBrightnessUp exec brightnessctl set +10%
+bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
+bindsym Print exec sway-interactive-screenshot
 
 # Autostart programs
 exec_always --no-startup-id picom -bf --config /home/asuka/.config/picom/picom.conf
@@ -43,7 +50,7 @@ exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec /home/asuka/.scripts/waybar.sh
 
 # Lock screen
-bindsym $mod+Delete exec swaylock -i /home/asuka/Pictures/.wallpaper/lock.png --clock
+bindsym $mod+Delete exec swaylock -i /home/asuka/Pictures/.wallpaper/lock.png --clock --effect-blur 10:2
 
 # Colors                 border  bground text    indicator child_border
 client.focused          #a6da95 #24283b #a6da95 #a6da95   #a6da95
