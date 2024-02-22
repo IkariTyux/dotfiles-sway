@@ -27,8 +27,8 @@
 - Alert `#cc1616`
 > Colors inspiration: Catppuccin & Tokyonight
 
-# Polybar
+# Waybar
 ![waybar](.img/screenshots/waybar.png)
 
-# Betterlockscreen
-![swaylock-color](.img/screenshots/swaylock-color.png)
+# Swaylock
+![swaylock](.img/screenshots/swaylock.png)
